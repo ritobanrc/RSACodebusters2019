@@ -1,10 +1,10 @@
 #!/bin/python3
 
 def n2l(n):
-    return chr(n+65)
+    return chr((n%26)+65)
 
 def l2n(l):
-    return ord(l)-65
+    return (ord(l)-65) % 26
 
 
 if __name__ == '__main__':

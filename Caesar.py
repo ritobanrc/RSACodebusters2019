@@ -9,8 +9,12 @@ def get_alphabet(shift = 0):
 
 
 def caesar_cipher(message, shift, keep_spaces=True):
-    return ''.join([n2l(l2n(l) + shift) if l != ' ' else (' ' if keep_spaces
-                                                          else '') for l in message.upper()])
+    return ''.join([n2l(l2n(l) + shift) # calculate the letter after shift
+                    if l != ' ' # but only if the letter is not a space.
+                    # if it is a space, insert a space or nothing, based on
+                    # keep_spaces
+                    else (' ' if keep_spaces else '')
+                    for l in message.upper()]) # for each letter in message
 
 
 if __name__ == '__main__':

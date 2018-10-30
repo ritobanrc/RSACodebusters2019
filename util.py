@@ -4,10 +4,7 @@ def n2l(n):
     return chr((n%26)+65)
 
 def l2n(l):
-    if l.isupper():
-        return (ord(l)-65) % 26
-    else:
-        return (ord(l)-97) % 26
+    return (ord(l.upper())-65) % 26
 
 def l2n2ls(l,s=0):
     if l.isupper():

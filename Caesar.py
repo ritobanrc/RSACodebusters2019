@@ -2,6 +2,7 @@
 
 from util import *
 from random import randint
+from quote_file_mod import get_quote
 
 def get_alphabet(shift = 0):
     r = [n2l(l + shift) for l in range(0, 26)]
@@ -20,5 +21,6 @@ def caesar_cipher(message, shift, keep_spaces=True):
 if __name__ == '__main__':
     print(get_alphabet())
     print(get_alphabet(randint(0,25)))
-    print('Hello World')
-    print(caesar_cipher('Hello World', 7))
+    t = get_quote()
+    print(t)
+    print(caesar_cipher(t, randint(0,25)))

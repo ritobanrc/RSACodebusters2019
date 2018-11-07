@@ -2,7 +2,7 @@
 
 import random
 from string import ascii_uppercase
-
+from quote_file_mod import get_quote
 def substitute(message):
     new_alphabet = {l1: l2 for l1, l2 in zip(ascii_uppercase,
                                              random.sample(ascii_uppercase, k=26))}
@@ -10,4 +10,6 @@ def substitute(message):
 
 
 if __name__ == '__main__':
-    print(substitute('The quick brown fox jumps over the lazy dog.'))
+    t = get_quote()
+    #print(t)
+    print(substitute(t))

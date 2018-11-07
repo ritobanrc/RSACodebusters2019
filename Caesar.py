@@ -23,4 +23,4 @@ if __name__ == '__main__':
     print(get_alphabet(randint(0,25)))
     t = get_quote()
     print(t)
-    print(caesar_cipher(t, randint(0,25)))
+    print(caesar_cipher(t, randint(1,25)))

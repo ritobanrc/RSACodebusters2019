@@ -11,7 +11,9 @@ def get_quotes(bible="bible.csv"):
             e.append(r[4] + ' - '+ books[int(r[1])-1] + ' Chapter '+ str(r[2])+ ' Verse '+ str(r[3]))
         return e
 
+def get_quote():
+    return choice(get_quotes())
 if __name__ == "__main__":
-    r = get_bible()
+    r = get_quotes()
     for i in range(10):
         print(str(i+1)+'. '+choice(r))

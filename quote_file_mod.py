@@ -8,7 +8,7 @@ def get_quotes(bible="bible.csv"):
         dat = csv.reader(f, delimiter=',')
         e = []
         for r in dat:
-            e.append(r[4] +)# ' - '+ books[int(r[1])-1] + ' Chapter '+ str(r[2])+ ' Verse '+ str(r[3]))
+            e.append(r[4])#+ ' - '+ books[int(r[1])-1] + ' Chapter '+ str(r[2])+ ' Verse '+ str(r[3]))
         return e
 
 def get_quote():
